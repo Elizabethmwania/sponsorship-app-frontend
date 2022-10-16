@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import '../styles.scss';
+import React, { useState }  from 'react';
 import Header from './Header';
+import '../styles.scss'
 const tableData = [
     {
         id: 1,
@@ -19,21 +19,19 @@ const tableData = [
     }
 ]
 
-function ApplicationTable(){
+const SponsorDashboard = () => {
     const statusOptions = [
-        { value: '', text: 'Pending...' },
-        { value: 'approve', text: 'Approve' },
-        { value: 'reject', text: 'Reject' },
+        { value: '', text: 'Approved...' },
+        { value: 'confirm', text: 'Confirm' }
     ];
+    const [selected, setSelected]= useState(statusOptions[0].value);
 
-        const [selected, setSelected]= useState(statusOptions[0].value);
+    const handleChange = event => {
+        console.log(event.target.value);
+        setSelected(event.target.value);
+    };
 
-        const handleChange = event => {
-            console.log(event.target.value);
-            setSelected(event.target.value);
-        };
-
-	const DisplayData=tableData.map(
+    const DisplayData=tableData.map(
 		(info)=>{
 			return(
 				<tr>
@@ -64,12 +62,13 @@ function ApplicationTable(){
 		}
 	)
 
-	return(
+    return (
         <>
         <Header/>
         <div className='container'>
-            <h2>Sponsorship Applications</h2>
-		<div className='table-responsive'>
+            <h2>Approved sponsorship Applications</h2>
+
+            <div className='table-responsive'>
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -100,7 +99,7 @@ function ApplicationTable(){
 		</div>
         </div>
         </>
-	)
-}
+    );
+};
 
-export default ApplicationTable;
+export default SponsorDashboard;

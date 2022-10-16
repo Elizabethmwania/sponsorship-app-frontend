@@ -15,9 +15,8 @@ export class Biodata extends Component {
         return (
             // <Col style={{ maxWidth: 450 }}>
             <>
-           
-            <div className='container'>
             <Header />
+            <div className='container'>
             <h2>Personal Details:</h2> 
             <div className='form-container'>
 

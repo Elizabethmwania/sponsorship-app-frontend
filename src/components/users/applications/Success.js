@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Row } from 'reactstrap';
 import '../../styles.scss'
+import Header from '../Header';
 // import img from '../../../img/gateway/check.png';
 export class Success extends Component {
     render() {
         return (
+            <>
+            <Header/>
             <div className='container'>
                 <div className='form-container' style={{marginTop:'20%', color:'green'}}>
                <h3>Registration successiful &nbsp; &nbsp;
@@ -13,6 +16,7 @@ export class Success extends Component {
                <small>You will be notified if approved!</small>
                </div>
             </div>
+            </>
         );
     }
 }

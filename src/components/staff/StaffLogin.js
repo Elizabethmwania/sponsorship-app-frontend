@@ -15,10 +15,7 @@ function StaffLogin() {
       username: "staff",
       password: "12345"
     },
-    {
-      username: "student",
-      password: "12345"
-    }
+   
   ];
 
   const errors = {
@@ -79,6 +76,9 @@ function StaffLogin() {
 
   return (
     <div className="form-page">
+      <div className="login-header">
+        <h2>Login Please</h2>
+      </div>
         {isSubmitted ? 
         <div></div> 
         : renderForm}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, Row } from 'reactstrap';
+import Header from '../Header';
 
 export class ReasonDetails extends Component {
     saveAndContinue = (e) => {
@@ -16,6 +17,7 @@ export class ReasonDetails extends Component {
 
         return (
                  <>
+                 <Header/>
                  <div className='container'>
                  <h2>Motivation:</h2>
                  <div className='form-container'>

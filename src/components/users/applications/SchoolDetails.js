@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, Row } from 'reactstrap';
 import '../../styles.scss';
+import Header from '../Header';
 export class SchoolDetails extends Component {
     saveAndContinue = (e) => {
         e.preventDefault();
@@ -16,6 +17,7 @@ export class SchoolDetails extends Component {
         const { values } = this.props;
         return (
                 <>
+                <Header/>
                 <div className='container'>
                 <h2>School Details:</h2>
                 <div className='form-container'>

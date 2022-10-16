@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Card, List, ListGroupItem } from 'reactstrap';
 import '../../styles.scss'
+import Header from '../Header';
 
 export class ConfirmDetails extends Component {
     saveAndContinue = (e) => {
@@ -20,6 +21,7 @@ export class ConfirmDetails extends Component {
 
         return (
             <>
+            <Header />
             <div className='container'>
             <h2>Confirm to submit!</h2>
             <div className='form-container'>
